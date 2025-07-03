@@ -18,15 +18,19 @@ const Navlinks = () => {
       {links.map(({ label, href }) => {
         const isActive =
           currentPath === href ||
-          (label === 'Home' && currentPath.startsWith('/#')) || // treat section hash as "home"
+          (label === 'Home' && currentPath.startsWith('/#')) ||
           (href.includes('#') && currentPath.startsWith(href));
 
         return (
           <div className={styles.navlinks} key={label}>
-            <Link href={href} passHref>
-              <a style={{ opacity: isActive ? '100%' : '80%' }} aria-current={isActive ? 'page' : undefined}>
-                {label}
-              </a>
+            <Link
+              href={href}
+              style={{
+                opacity: isActive ? '100%' : '80%',
+              }}
+              aria-current={isActive ? 'page' : undefined}
+            >
+              {label}
             </Link>
           </div>
         );

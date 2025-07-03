@@ -17,17 +17,16 @@ const HomePage = ({ currentTheme }) => {
         <h2 className={styles.subheading} style={{ color: currentTheme.subtext }}>
           {userinfo.greeting.subtitle}
         </h2>
-        <Link href="#work" passHref>
-          <a
-            className={styles.cta1}
-            style={{
-              backgroundColor: currentTheme.accent,
-              color: currentTheme.contrastText,
-              boxShadow: currentTheme.boxShadow,
-            }}
-          >
-            {ctaTexts.landingCTA}
-          </a>
+        <Link
+          href="#work"
+          className={styles.cta1}
+          style={{
+            backgroundColor: currentTheme.accent,
+            color: currentTheme.contrastText,
+            boxShadow: currentTheme.boxShadow,
+          }}
+        >
+          {ctaTexts.landingCTA}
         </Link>
       </section>
 
@@ -42,13 +41,12 @@ const HomePage = ({ currentTheme }) => {
           </div>
         ))}
         <div style={{ textAlign: 'center', paddingBottom: '2rem' }}>
-          <Link href="/work" passHref>
-            <a
-              className={styles.cta3}
-              style={{ backgroundColor: currentTheme.accent, color: currentTheme.contrastText }}
-            >
-              {ctaTexts.workCTA} <span>&gt;</span>
-            </a>
+          <Link
+            href="/work"
+            className={styles.cta3}
+            style={{ backgroundColor: currentTheme.accent, color: currentTheme.contrastText }}
+          >
+            {ctaTexts.workCTA} <span>&gt;</span>
           </Link>
         </div>
       </section>
@@ -80,21 +78,20 @@ const HomePage = ({ currentTheme }) => {
             color: currentTheme.subtext,
           }}
         >
-          <Link href={userinfo.about.resume} passHref>
-            <a
-              className={styles.cta4}
-              style={{
-                background: 'transparent',
-                border: `2px solid ${currentTheme.subtext}`,
-                display: 'flex',
-                alignItems: 'center',
-              }}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {ctaTexts.resumeCTA}&nbsp;&nbsp;&nbsp;&nbsp;
-              <FontAwesomeIcon width="15px" height="15px" icon={faExternalLinkAlt} />
-            </a>
+          <Link
+            href={userinfo.about.resume}
+            className={styles.cta4}
+            style={{
+              background: 'transparent',
+              border: `2px solid ${currentTheme.subtext}`,
+              display: 'flex',
+              alignItems: 'center',
+            }}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {ctaTexts.resumeCTA}&nbsp;&nbsp;&nbsp;&nbsp;
+            <FontAwesomeIcon width="15px" height="15px" icon={faExternalLinkAlt} />
           </Link>
         </div>
       </section>

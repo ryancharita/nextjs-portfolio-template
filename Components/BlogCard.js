@@ -37,10 +37,8 @@ const BlogCard = ({ blog, currentTheme }) => {
         </Box>
 
         <Box mt={4}>
-          <Link href={blog.link || blog.url} passHref>
-            <a className={styles.cta2} style={{ color: '#3182ce' }}>
-              View More
-            </a>
+          <Link href={blog.link || blog.url} className={styles.cta2} style={{ color: '#3182ce' }}>
+            View More
           </Link>
         </Box>
       </Box>

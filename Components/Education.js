@@ -37,16 +37,15 @@ const Education = ({ currentTheme }) => {
       </div>
 
       <div style={{ textAlign: 'center', paddingBottom: '2rem' }}>
-        <Link href="/#about" passHref>
-          <a
-            className={styles.cta3}
-            style={{
-              background: currentTheme.accent,
-              color: currentTheme.contrastText,
-            }}
-          >
-            {ctaTexts.educationCTA} <span>&gt;</span>
-          </a>
+        <Link
+          href="/#about"
+          className={styles.cta3}
+          style={{
+            background: currentTheme.accent,
+            color: currentTheme.contrastText,
+          }}
+        >
+          {ctaTexts.educationCTA} <span>&gt;</span>
         </Link>
       </div>
     </section>

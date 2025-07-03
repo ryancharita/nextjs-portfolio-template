@@ -121,14 +121,14 @@ const Contact = ({ currentTheme }) => {
 
       <div style={{ textAlign: 'center', paddingTop: '0.5rem' }}>
         <Link href={`mailto:${userinfo.contact.email}`} passHref>
-          <a>{userinfo.contact.email}</a>
+          {userinfo.contact.email}
         </Link>
       </div>
 
       {userinfo.contact.phone && (
         <div style={{ textAlign: 'center', paddingTop: '0.2rem', color: currentTheme.tertiary }}>
           <Link href={`tel:${userinfo.contact.countrycode}${userinfo.contact.phone}`} passHref>
-            <a>{`${userinfo.contact.countrycode}${userinfo.contact.phone}`}</a>
+            {`${userinfo.contact.countrycode}${userinfo.contact.phone}`}
           </Link>
         </div>
       )}
@@ -137,9 +137,7 @@ const Contact = ({ currentTheme }) => {
         {userinfo.socials?.map((social, key) => (
           <div className={styles.socialIcon} style={iconStyles} key={key}>
             <Link href={social.link} passHref>
-              <a target="_blank" rel="noopener noreferrer">
-                <FontAwesomeIcon icon={social.icon} />
-              </a>
+              <FontAwesomeIcon icon={social.icon} />
             </Link>
           </div>
         ))}

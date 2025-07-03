@@ -87,56 +87,50 @@ const WorkProject = ({ currentTheme, project, id }) => {
           <div>
             {project.githubLink ? (
               <Tooltip label="Github link" placement="right">
-                <Link href={project.githubLink} passHref>
-                  <a target="_blank" rel="noopener noreferrer">
-                    <div
-                      className={styles.socialIcon}
-                      style={{ color: currentTheme.subtext, borderColor: currentTheme.subtext }}
-                    >
-                      <FontAwesomeIcon icon={faGithubAlt} />
-                    </div>
-                  </a>
+                <Link
+                  href={project.githubLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.socialIcon}
+                  style={{ color: currentTheme.subtext, borderColor: currentTheme.subtext }}
+                >
+                  <FontAwesomeIcon icon={faGithubAlt} />
                 </Link>
               </Tooltip>
             ) : (
-              <div
-                className={styles.socialIcon}
-                onClick={() => handleToast('github')}
-                style={{ color: currentTheme.subtext, borderColor: currentTheme.subtext, cursor: 'pointer' }}
-              >
-                <Tooltip label="Github link" placement="right">
-                  <span>
-                    <FontAwesomeIcon icon={faGithubAlt} />
-                  </span>
-                </Tooltip>
-              </div>
+              <Tooltip label="Github link" placement="right">
+                <div
+                  className={styles.socialIcon}
+                  onClick={() => handleToast('github')}
+                  style={{ color: currentTheme.subtext, borderColor: currentTheme.subtext, cursor: 'pointer' }}
+                >
+                  <FontAwesomeIcon icon={faGithubAlt} />
+                </div>
+              </Tooltip>
             )}
 
             {project.projectLink ? (
               <Tooltip label="Project link" placement="right">
-                <Link href={project.projectLink} passHref>
-                  <a target="_blank" rel="noopener noreferrer">
-                    <div
-                      className={styles.socialIcon}
-                      style={{ color: currentTheme.subtext, borderColor: currentTheme.subtext }}
-                    >
-                      <FontAwesomeIcon icon={faTelegramPlane} />
-                    </div>
-                  </a>
+                <Link
+                  href={project.projectLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.socialIcon}
+                  style={{ color: currentTheme.subtext, borderColor: currentTheme.subtext }}
+                >
+                  <FontAwesomeIcon icon={faTelegramPlane} />
                 </Link>
               </Tooltip>
             ) : (
-              <div
-                className={styles.socialIcon}
-                onClick={() => handleToast('project')}
-                style={{ color: currentTheme.subtext, borderColor: currentTheme.subtext, cursor: 'pointer' }}
-              >
-                <Tooltip label="Project link" placement="right">
-                  <span>
-                    <FontAwesomeIcon icon={faTelegramPlane} />
-                  </span>
-                </Tooltip>
-              </div>
+              <Tooltip label="Project link" placement="right">
+                <div
+                  className={styles.socialIcon}
+                  onClick={() => handleToast('project')}
+                  style={{ color: currentTheme.subtext, borderColor: currentTheme.subtext, cursor: 'pointer' }}
+                >
+                  <FontAwesomeIcon icon={faTelegramPlane} />
+                </div>
+              </Tooltip>
             )}
           </div>
         </div>

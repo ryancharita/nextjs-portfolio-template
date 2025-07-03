@@ -20,10 +20,17 @@ const HomeProject = ({ currentTheme, project, id }) => {
             borderColor: currentTheme.accent,
           }}
         >
-          <Link href={project.projectLink} passHref>
-            <a target="_blank" rel="noopener noreferrer">
-              <FontAwesomeIcon icon={faTelegramPlane} />
-            </a>
+          <Link
+            href={project.projectLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              color: currentTheme.accent,
+              backgroundColor: currentTheme.footerColor,
+              borderColor: currentTheme.accent,
+            }}
+          >
+            <FontAwesomeIcon icon={faTelegramPlane} />
           </Link>
         </div>
 
@@ -32,10 +39,8 @@ const HomeProject = ({ currentTheme, project, id }) => {
           {project.description}
         </h2>
 
-        <Link href="/work" passHref>
-          <a className={styles.cta2} style={{ color: currentTheme.tertiary }}>
-            View More
-          </a>
+        <Link href="/work" className={styles.cta2} style={{ color: currentTheme.tertiary }}>
+          View More
         </Link>
       </div>
     </article>

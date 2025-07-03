@@ -10,10 +10,8 @@ const Footer = ({ currentTheme }) => {
     >
       <div className={styles.footertable}>
         <div>
-          <Link href="/" passHref>
-            <a>
-              <h2 className={styles.footerlogo}>{userinfo.logoText}</h2>
-            </a>
+          <Link href="/" className={styles.footerlogo}>
+            {userinfo.logoText}
           </Link>
         </div>
 
@@ -21,41 +19,29 @@ const Footer = ({ currentTheme }) => {
           <li className={styles.listHeading}>Socials</li>
           {userinfo.socials?.map((social, index) => (
             <li key={index}>
-              <Link href={social.link} passHref>
-                <a target="_blank" rel="noopener noreferrer">
-                  {social.type}
-                </a>
+              <Link href={social.link} target="_blank" rel="noopener noreferrer">
+                {social.type}
               </Link>
             </li>
           ))}
           <li>
-            <Link href={`mailto:${userinfo.contact?.email}`} passHref>
-              <a>Mail</a>
-            </Link>
+            <Link href={`mailto:${userinfo.contact?.email}`}>Mail</Link>
           </li>
         </ul>
 
         <ul>
           <li className={styles.listHeading}>Pages</li>
           <li>
-            <Link href="/" passHref>
-              <a>Home</a>
-            </Link>
+            <Link href="/">Home</Link>
           </li>
           <li>
-            <Link href="/#about" passHref>
-              <a>About</a>
-            </Link>
+            <Link href="/#about">About</Link>
           </li>
           <li>
-            <Link href="/work" passHref>
-              <a>Work</a>
-            </Link>
+            <Link href="/work">Work</Link>
           </li>
           <li>
-            <Link href="/contact" passHref>
-              <a>Contact</a>
-            </Link>
+            <Link href="/contact">Contact</Link>
           </li>
         </ul>
       </div>

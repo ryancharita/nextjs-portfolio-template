@@ -10,10 +10,7 @@ const Navbar = ({ toggleTheme, currentTheme }) => {
   const [sticky, setSticky] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setSticky(window.scrollY > 0);
-    };
-
+    const handleScroll = () => setSticky(window.scrollY > 0);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -35,10 +32,8 @@ const Navbar = ({ toggleTheme, currentTheme }) => {
           marginBottom: drawerVisible ? '10px' : '0',
         }}
       >
-        <Link href="/" passHref>
-          <a>
-            <h2 className={styles.logo}>{userinfo.logoText}</h2>
-          </a>
+        <Link href="/" className={styles.logo}>
+          {userinfo.logoText}
         </Link>
 
         {!drawerVisible && (
