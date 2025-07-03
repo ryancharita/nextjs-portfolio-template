@@ -51,6 +51,7 @@ const Work = ({ currentTheme }) => {
   return (
     <div>
       <div className={styles.workHeading}>{headings.workMainPage}</div>
+
       <div className={styles.workmain} style={{ color: currentTheme.subtext }}>
         {projects.map((project, key) => (
           <div key={project.id || key} data-aos="fade-up">
@@ -58,8 +59,9 @@ const Work = ({ currentTheme }) => {
           </div>
         ))}
       </div>
-      aqweqwe
+
       {userinfo.experience?.visible && <Experiences currentTheme={currentTheme} />}
+
       {renderBlogs()}
     </div>
   );

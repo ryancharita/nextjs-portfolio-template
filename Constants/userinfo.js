@@ -63,7 +63,8 @@ I focus on writing clean, efficient code and developing systems that are reliabl
 I’ve worked on a wide range of projects, from startup MVPs to production-ready platforms, always with a focus on clean code, maintainability, and delivering real value. I’m also experienced with tools like Docker, Git, and Vercel, which help streamline development and deployment workflows.
 
 Whether collaborating with teams or working independently, I bring strong attention to detail, a proactive mindset, and a passion for solving problems through code.`,
-    resume: '/', //link your resume here. it can be drive link or any other link
+    resume:
+      'https://www.canva.com/design/DAGsF5tVDvM/bNszcgjll6g6lk49c6HVUQ/view?utm_content=DAGsF5tVDvM&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hefb5560328', //link your resume here. it can be drive link or any other link
   },
   education: {
     visible: true, //set this to false if you want to omit this section
@@ -116,8 +117,10 @@ Whether collaborating with teams or working independently, I bring strong attent
         company: 'Digital Transformation',
         companylogo: '/dx.png',
         position: 'Senior Front-End Developer',
-        time: 'May 2021 - Oct 2023',
-        description: `As a Senior Front-End Developer, I was entrusted with leading the development team at our newly established office. My responsibilities included mentoring junior developers, facilitating onboarding processes, and establishing technical workflows. I also represented the team on an international project, where I collaborated with cross-functional teams to deliver high-quality frontend solutions.`,
+        time: 'May 2023 - October 2024',
+        description: `I played a dual role of technical contributor and team lead. I was responsible for training and mentoring new hires and interns, overseeing their progress, and ensuring adherence to best practices in frontend development. I also acted as a key liaison between the development team and upper management, ensuring that technical concerns, blockers, and feedback were clearly communicated and addressed.
+
+In addition to my leadership duties, I was outsourced to an international project, where I worked with global teams to deliver scalable, user-centric frontend solutions.`,
       },
       {
         company: 'Fresh Clinics',
