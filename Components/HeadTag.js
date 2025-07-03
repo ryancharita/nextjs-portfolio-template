@@ -1,26 +1,34 @@
-import React from 'react'
-import Head from 'next/head'
-import { userinfo } from '../Constants/userinfo'
+import React from 'react';
+import Head from 'next/head';
+import { userinfo } from '../Constants/userinfo';
 
-const HeadTag = ({page}) => {
-    return (
-        <Head>
-            <title>{`${userinfo.logoText} | ${page}`}</title>
-            <link rel="icon" href="/favicon.jpg" />
-            <meta name="title" content={userinfo.logoText} />
-            <meta name="description" content={userinfo.greeting.subtitle} />
+const HeadTag = ({ pageTitle = '', image = '/favicon.png' }) => {
+  const siteTitle = userinfo.logoText;
+  const description = userinfo.greeting.subtitle;
 
-            <meta property="og:type" content="website" />
-            <meta property="og:title" content={userinfo.logoText} />
-            <meta property="og:description" content={userinfo.greeting.subtitle} />
-            <meta property="og:image" content="" />
+  const fullTitle = pageTitle ? `${pageTitle} | ${siteTitle}` : siteTitle;
 
-            <meta property="twitter:card" content="summary_large_image" />
-            <meta property="twitter:title" content={userinfo.logoText} />
-            <meta property="twitter:description" content={userinfo.greeting.subtitle} />
-            <meta property="twitter:image" content="" />
-        </Head>
-    )
-}
+  return (
+    <Head>
+      <title>{fullTitle}</title>
+      <link rel="icon" href="/favicon.png" />
 
-export default HeadTag
+      <meta name="title" content={siteTitle} />
+      <meta name="description" content={description} />
+
+      {/* Open Graph / Facebook */}
+      <meta property="og:type" content="website" />
+      <meta property="og:title" content={fullTitle} />
+      <meta property="og:description" content={description} />
+      <meta property="og:image" content={image} />
+
+      {/* Twitter */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta property="twitter:title" content={fullTitle} />
+      <meta property="twitter:description" content={description} />
+      <meta property="twitter:image" content={image} />
+    </Head>
+  );
+};
+
+export default HeadTag;

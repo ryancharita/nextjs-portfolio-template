@@ -1,33 +1,38 @@
-import { useState, useEffect } from 'react'
-import styles from '../styles/NavbarFooter.module.css'
-import Link from 'next/link'
-import { useRouter } from 'next/router'
+import styles from '../styles/NavbarFooter.module.css';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 const Navlinks = () => {
-    const router = useRouter()
-    const [activeLink, setActiveLink] = useState('/')
+  const router = useRouter();
+  const currentPath = router.asPath;
 
-    useEffect(() => {
-        setActiveLink(router.asPath)
-    }, [router.asPath])
+  const links = [
+    { label: 'Home', href: '/' },
+    { label: 'About', href: '/#about' },
+    { label: 'Work', href: '/work' },
+    { label: 'Contact', href: '/contact' },
+  ];
 
-    return (
-        <>
-            <div className={styles.navlinks}>
-                <Link href='/'><a style={{ opacity: activeLink === '/' || activeLink === '/#work' ? '100%' : '80%' }}>Home</a></Link>
-            </div>
-            <div className={styles.navlinks}>
-                <Link href='/#about'><a style={{ opacity: activeLink === '/#about' ? '100%' : '80%' }}>About</a></Link>
-            </div>
-            <div className={styles.navlinks}>
-                <Link href='/work'><a style={{ opacity: activeLink === '/work' ? '100%' : '80%' }}>Work</a></Link>
-            </div>
-            <div className={styles.navlinks}>
-                <Link href='/contact'><a style={{ opacity: activeLink === '/contact' ? '100%' : '80%' }}>Contact</a></Link>
-            </div>
-        </>
+  return (
+    <>
+      {links.map(({ label, href }) => {
+        const isActive =
+          currentPath === href ||
+          (label === 'Home' && currentPath.startsWith('/#')) || // treat section hash as "home"
+          (href.includes('#') && currentPath.startsWith(href));
 
-    )
-}
+        return (
+          <div className={styles.navlinks} key={label}>
+            <Link href={href} passHref>
+              <a style={{ opacity: isActive ? '100%' : '80%' }} aria-current={isActive ? 'page' : undefined}>
+                {label}
+              </a>
+            </Link>
+          </div>
+        );
+      })}
+    </>
+  );
+};
 
-export default Navlinks
+export default Navlinks;
