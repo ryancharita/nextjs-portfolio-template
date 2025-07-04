@@ -5,7 +5,7 @@
   "author": "Asavari Ambavane",
   "private": true,
   "scripts": {
-    "dev": "set NODE_OPTIONS=--openssl-legacy-provider && next dev",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
