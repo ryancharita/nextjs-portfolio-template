@@ -63,8 +63,7 @@ I focus on writing clean, efficient code and developing systems that are reliabl
 I’ve worked on a wide range of projects, from startup MVPs to production-ready platforms, always with a focus on clean code, maintainability, and delivering real value. I’m also experienced with tools like Docker, Git, and Vercel, which help streamline development and deployment workflows.
 
 Whether collaborating with teams or working independently, I bring strong attention to detail, a proactive mindset, and a passion for solving problems through code.`,
-    resume:
-      'https://www.canva.com/design/DAGsF5tVDvM/bNszcgjll6g6lk49c6HVUQ/view?utm_content=DAGsF5tVDvM&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hefb5560328', //link your resume here. it can be drive link or any other link
+    resume: 'https://drive.google.com/file/d/1eaWSKeY2dAX_jxIIDvBDsYWWC5Nw2whR/view?usp=sharing', //link your resume here. it can be drive link or any other link
   },
   education: {
     visible: true, //set this to false if you want to omit this section
