@@ -55,6 +55,7 @@ const Work = ({ currentTheme }) => {
       <div className={styles.workmain} style={{ color: currentTheme.subtext }}>
         {projects.map((project, key) => (
           <div key={project.id || key} data-aos="fade-up">
+            asdasd
             <WorkProject currentTheme={currentTheme} project={project} id={key} />
           </div>
         ))}
