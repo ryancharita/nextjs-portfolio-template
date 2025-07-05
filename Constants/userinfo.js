@@ -125,7 +125,7 @@ In addition to my leadership duties, I was outsourced to an international projec
         company: 'Fresh Clinics',
         companylogo: 'fc.png',
         position: 'Mid-level Software Engineer',
-        time: 'May 2021 - Jul 2026',
+        time: 'May 2021 - Jul 2025',
         description: `As a Mid-Level Software Engineer, I was responsible for building and maintaining the company’s web application and mobile API. I worked closely with cross-functional teams to deliver scalable backend services and responsive front-end features that supported both web and mobile platforms.`,
       },
     ],
